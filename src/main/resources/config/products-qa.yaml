@@ -1,0 +1,23 @@
+spring:
+  sql:
+    init:
+      mode: never
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+  flyway:
+    enabled: false
+
+info:
+  build:
+    version: ${APP_BUILD_VERSION:v2.1}
+  contact:
+    name: ${APP_CONTACT_NAME:Mitanshu}
+    email: ${APP_CONTACT_EMAIL:}
+    url: ${APP_CONTACT_URL:}
+
+logging:
+  level:
+    org.hibernate.SQL: INFO
+    org.hibernate.orm.jdbc.bind: INFO

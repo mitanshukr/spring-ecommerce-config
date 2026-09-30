@@ -1,0 +1,24 @@
+spring:
+#  datasource:
+#    url: ${PROD_DB_URL}
+#    username: ${PROD_DB_USERNAME}
+#    password: ${PROD_DB_PASSWORD}
+  sql:
+    init:
+      mode: never
+  jpa:
+    defer-datasource-initialization: false
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+  flyway:
+    enabled: false
+
+info:
+  build:
+    version: ${APP_BUILD_VERSION:v1.0}
+
+logging:
+  level:
+    org.hibernate.SQL: WARN
+    org.hibernate.orm.jdbc.bind: WARN
